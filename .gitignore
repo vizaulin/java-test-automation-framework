@@ -1,0 +1,40 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.txt
+*.bat
+*.iml
+*.json
+.DS_Store
+# Config Files #
+config.properties
+
+# virtual machine crash logs
+hs_err_pid*
+
+# temp files
+*~
+
+# Exclude project files:
+/target
+/.idea/*
+Procfile
+test-output/
+build/
+.allure/
+allure-reports/
+allure-results/
+videos/

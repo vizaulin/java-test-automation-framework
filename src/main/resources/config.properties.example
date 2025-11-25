@@ -1,0 +1,3 @@
+db.host=host
+db.login=login
+db.password=password

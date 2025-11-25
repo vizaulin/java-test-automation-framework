@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="3" parallel="methods">
+    <listeners>
+        <listener class-name="autotests.settings.TestListener"/>
+    </listeners>
+    <test enabled="false" name="SeleniumWebTests">
+        <classes>
+            <class name="autotests.selenium.SeleniumWebTests"/>
+        </classes>
+    </test>
+
+    <test enabled="true" name="SelectedTests">
+        <classes>
+            <class name="autotests.selenium.SeleniumWebTests">
+                <methods>
+                    <include name="changeLanguage"/>
+                    <include name="searchTemplateAndCheckKeyword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test enabled="false" name="APITests">
+        <classes>
+            <class name="autotests.api.APITests"/>
+        </classes>
+    </test>
+
+    <test enabled="true" name="SelectedAPITests">
+        <classes>
+            <class name="autotests.api.APITests">
+                <methods>
+                    <include name="createPlayerExpectingError"/>
+                    <include name="createdPlayerCanBeRetrievedById"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
